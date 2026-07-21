@@ -15,3 +15,4 @@ A Python automation project for:
 - Git
 - Google Ads API
 - Meta Marketing API
+Testing Git 
