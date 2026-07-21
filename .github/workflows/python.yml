@@ -1,0 +1,29 @@
+name: Python Automation
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"
+
+      - name: Verify Python
+        run: python --version
+
+      - name: List Files
+        run: ls -la
+
+      - name: Run Script
+        run: python main.py
